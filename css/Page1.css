@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+/*navbar*/
+.navbar {
+  background-color: rgb(27, 197, 183);
+}
+.navbar-brand {
+  font-family: 'Viga', sans-serif;
+  font-size: 24px;
+}
+
+.dropdown-menu {
+  padding: 10px;
+  background-color: rgb(225, 241, 240);
+}
+.dropdown-item {
+  margin: 20px;
+}
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* konten */
+.container-konten {
+  max-width: 800px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.container-konten-utama {
+  margin-top: 100px;
+}
+
+.tebal {
+  font-weight: bold;
+}

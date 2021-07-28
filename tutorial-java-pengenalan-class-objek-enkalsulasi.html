@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- my fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/css_page.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <title>Belajar Java OOP - Pengenalan Class, Object dan Enkapsulasi</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">INDEHOY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Tutorial</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="drowpdown-item" href="#">Android</a></li>
+                <li><a class="drowpdown-item" href="#">Komputer</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Pemrograman</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="drowpdown-item" href="#">C++</a></li>
+                <li><a class="drowpdown-item" href="#">Python</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+    <!-- Konten -->
+    <div class="container-konten">
+      <div class="row">
+        <div class="konten-utama border">
+          <h1 class="judul text-center">
+            Belajar Java OOP: Pengenalan Class, Object dan Enkapsulasi
+            <hr />
+          </h1>
+          <div class="author d-flex align-self-stretch">
+            <p class="tanggal"><a href="#" class="penulis">Arman Maulana </a> • 12 Mei 2021</p>
+          </div>
+          <br />
+          <img src="img/tutorial-java/input-output/jumbotron.jpg" alt="jumbotron" class="gambar-utama" /><br />
+          <p>Untuk dapat membuat program yang sesuai dengan penerapan di kehidupan sehari-hari, OOP adalah jalan keluarnya.</p>
+          <p>Jika biasanya developer merangkai kode berdasarkan function dan logic, dengan OOP developer dapat mengembangkan software yang terbagi dalam objek-objek tertentu.</p>
+          <p>Objek-objek yang saling berkaitan dan disusun kedalam satu kelompok ini disebut dengan class.</p>
+          <p>Nantinya, objek-objek tersebut akan saling berinteraksi untuk menyelesaikan masalah program yang rumit.</p>
+          <p>Jika sebelumnya developer harus berfokus pada logic yang akan dimanipulasi, dengan OOP, developer dapat lebih terfokus pada objeknya saja untuk dimanipulasi.</p>
+          <p>Berikut pengertion Class, Object dan Enkapsulasi:</p>
+          <br>
+          <h2>Class dan Object</h2>
+          <br>
+          <p>Class merupakan cetak biru (blue print) dari objek atau dengan kata lain sebuah Class menggambarkan ciri-ciri objek secara umum.</p>
+          <p>Class sebenarnya bertugas untuk mengumpulkan prosedur/fungsi dan variable dalam satu tempat</p>
+          <p>Contoh :</p>
+          <p>Kita ingin membuat game sederhana, di dalamya ada kucing dan makanan.</p>
+          <p>Dengan class, kita bisa menentukan mana variable dan prosedur untuk kucing dan makanan.</p>
+          <p>Didalam class ini akan kita pakai untuk membuat objek.</p>
+          <p>Jadi class berisi definisi variable dan fungsi yang menggambarkan sebuah objek.</p>
+          <p>Dalam OOP :</p>
+          <ul>
+            <li><span class="tebal">Variabel</span> disebut <span class="tebal">atribut</span> atau <span class="tebal">properti;</span></li>
+            <li><span class="tebal">Fungsi</span> disebut <span class="tebal">method.</span></li>
+            <li>Class JOptionPane;</li>
+          </ul>
+          <p>Contoh Class:</p>
+          <!-- kode editor -->
+<pre><code><span class="biru-muda">class</span><span class="hijau"> NamaClass</span> <span class="pink">{</span>
+  String atribut1<span class="pink">;</span>
+  String atribut2<span class="pink">;</span>
+
+  <span class="biru-muda">void </span><span class="hijau">NamaMethod</span> <span class="pink">(){...}</span>
+  <span class="biru-muda">void </span><span class="hijau">NamaMethodLain</span> <span class="pink">(){...}
+}</span>
+</pre></code>
+          <!-- akhir kode editor -->
+          <p>Lalu, kita biasanya membuat objek seperti ini:</p>
+          <pre><code>NamaClass namaObj <span class="pink">= new </span>NamaClass<span class="pink">();</span> </code></pre>
+
+          <p>Kata kunci <span class="pink">new</span> berfungsi untuk membuat objek baru dari class tertentu.</p>
+          <p>Setelah membuat objek, kita bisa mengakses atribut dan method dari objek tersebut.</p>
+          <p>Contoh:</p>
+          <pre><code>namaObj<span class="pink">.</span><span class="hijau">namaMethod</span><span class="pink">();</span>
+namaObj<span class="pink">.</span><span class="hijau">atribut1</span><span class="pink">;</span></code></pre>
+
+            <p>Tanda titik(<span class="pink">.</span>) berfungsi untuk mengakses atribbut dan method.</p>
+            <br>
+            <h2>Enkapsulasi</h2>
+            <br>
+            <p>Enkapsulasi (encapsulation) merupakan cara untuk melindungi property (atribut) / method tertentu dari sebuah kelas agar tidak sembarangan diakses dan dimodifikasi oleh suatu bagian program.</p>
+            <p>Cara untuk melindungi data yaitu dengan menggunakan access modifiers (hak akses).</p>
+            <p>Ada 4 hak akses yang tersedia, yaitu default, public, protected, private.</p>
+            <p>Untuk lebih jelasnya, silahkan lihat table berikut :</p>
+            <!-- tabel enkapsulasi -->
+            <table border="1" cellpadding="7">
+              <tr class="text-center">
+                <th>No</th>
+                <th>Modifier</th>
+                <th>Pada class</th>
+                <th>Pada method dan variable</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Default (tidak ada modifier).</td>
+                <td>Dapat diakses oleh yang sepaket.</td>
+                <td>Diwarisi oleh subkelas sepaket yang sama, dapat diakses oleh method-method yang sepaket.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Public</td>
+                <td>Dapat diakses dimanapun</td>
+                <td>Diwarisi oleh subkelasnya dan dapat diakses dimanapun.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>protected</td>
+                <td>Tidak bisa diterapkan</td>
+                <td>Diwarisi oleh subkelasnya, dan dapat diakses oleh method-method yang sepaket.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Private</td>
+                <td>Tidak bisa diterapkan</td>
+                <td>Tidak dapat diakses dimanapun kecuali oleh method-method yang ada didalam kelas itu sendiri.</td>
+              </tr>
+            </table>
+            <br>
+            <table border="1" cellpadding="7" class="m-auto">
+              <tr class="text-center">
+                <th>Aksesabilitas</th>
+                <th>Public</th>
+                <th>Private</th>
+                <th>Protected</th>
+                <th>Default</th>
+              </tr>
+              <tr>
+                <td>Dari kelas yang sama</td>
+                <td>Ya</td>
+                <td>Ya</td>
+                <td>Ya</td>
+                <td>Ya</td>
+              </tr>
+              <tr>
+                <td>Dari sembarang kelas dalam paket yang sama</td>
+                <td>Ya</td>
+                <td>Tidak</td>
+                <td>Ya</td>
+                <td>Ya</td>
+              </tr>
+              <tr>
+                <td>Dari sembarang kelas diluar paket</td>
+                <td>Ya</td>
+                <td>Tidak</td>
+                <td>Tidak</td>
+                <td>Tidak</td>
+              </tr>
+              <tr>
+                <td>Dari subkelas dalam paket yang sama</td>
+                <td>Ya</td>
+                <td>Tidak</td>
+                <td>Ya</td>
+                <td>Ya</td>
+              </tr>
+              <tr>
+                <td>Dari subkelas diluar paket</td>
+                <td>Ya</td>
+                <td>Tidak</td>
+                <td>Ya</td>
+                <td>Tidak</td>
+              </tr>
+            </table>
+            <br>
+            <!-- akhir table -->
+            <p>Contoh :</p>
+            <p>Kita akan membuat program perhitungan luas alas segitiga sederhana.</p>
+            <p>Buatlah project java baru dan buat file bernama <span class="tebal biru">Enkapsulasi.java</span></p>
+            <!-- kode editor enkapsulasi java -->
+<pre><code><span class="biru-muda">public class</span> <span class="hijau">Enkapsulasi</span> <span class="pink">{</span>
+  <span class="komen">// deklarasi variable atribut</span>
+  <span class="biru-muda">private</span> <span class="hijau">int</span> alas<span class="pink">,</span>tinggi<span class="pink">;</span>
+  <span class="biru-muda">private</span> <span class="hijau">double</span> luasSegitiga<span class="pink">;</span>
+
+  <span class="komen">// membuat method </span>
+  <span class="biru-muda">public</span> <span class="hijau">int</span> getAlas<span class="pink">() {</span> 
+      <span class="orange">return</span> alas<span class="pink">;
+    }</span>
+  <span class="biru-muda">public</span> <span class="hijau">void</span> setAlas<span class="pink">(</span><span class="hijau">int</span> alas <span class="pink">) {</span>
+    <span class="biru">this</span>.alas <span class="pink">=</span> alas<span class="pink">;
+   }</span>
+
+  <span class="biru-muda">public</span> <span class="hijau">int</span> getTinggi<span class="pink">() {</span> 
+    <span class="orange">return</span> tinggi<span class="pink">;
+   }</span>
+  <span class="biru-muda">public</span> <span class="hijau">void</span> setTinggi<span class="pink">(</span><span class="hijau">int</span> tinggi <span class="pink">) {</span>
+    <span class="biru">this</span>.tinggi <span class="pink">=</span> tinggi<span class="pink">;
+   }</span>
+
+   <span class="biru-muda">public</span> <span class="hijau">int</span> getLuasSegitiga<span class="pink">() {</span> 
+    <span class="orange">return</span> luasSegitiga<span class="pink">;
+   }</span>
+  <span class="biru-muda">public</span> <span class="hijau">void</span> setLuasSegitiga<span class="pink">(</span><span class="hijau">int</span> alas, <span class="hijau">int</span> tinggi <span class="pink">) {</span>
+    luasSegitiga <span class="pink">=</span> 0.5 * <span class="pink">(</span><span class="hijau">double</span><span class="pink">)(</span>alas*tinggi<span class="pink">);
+   }</span>
+</code></pre>
+            <!-- akhir kode editor -->
+            <br>
+            <p>Selanjutnya buat Main filenya dengan nama <span class="tebal biru">Main.java</span></p>
+            <!-- kode editor main -->
+<pre><code><span class="biru-muda">public class</span> <span class="hijau">Main</span> <span class="pink">{</span>
+  <span class="biru-muda">public static void</span> <span class="hijau">main</span><span class="pink">(</span>String<span class="pink">[]</span> args<span class="pink">) {</span>
+    <span class="komen">// buat object enkapsulasi</span>
+  <span class="hijau">Enkapsulasi</span> ob <span class="pink">=</span> <span class="orange">new</span> Enkapsulasi<span class="pink">();</span>
+
+  <span class="komen">// akses method dari enkapsulasi</span>
+  <span class="komen">// memasukkan data kedalam method enkapsulasi</span>
+  ob<span class="pink">.</span><span class="kuning">setAlas</span><span class="pink">(</span>5<span class="pink">);</span>
+  ob<span class="pink">.</span><span class="kuning">setTinggi</span><span class="pink">(</span>7<span class="pink">);</span>
+
+  <span class="komen">// memanggil method untuk menampilkan data</span>
+  System<span class="pink">.</span><span class="hijau">out</span><span class="pink">.</span><span class="hijau">println</span><span class="pink">(</span><span class="orange">"Alas : "</span>+ ob<span class="pink">.</span><span class="kuning">getAlas</span><span class="pink">());</span>
+  System<span class="pink">.</span><span class="hijau">out</span><span class="pink">.</span><span class="hijau">println</span><span class="pink">(</span><span class="orange">"Tinggi : "</span>+ ob<span class="pink">.</span><span class="kuning">getTinggi</span><span class="pink">());</span>
+  ob<span class="pink">.</span><span class="kuning">setLuasSegitiga</span><span class="pink">(</span>ob<span class="pink">.</span><span class="kuning">getAlas</span><span class="pink">()</span>, ob<span class="pink">.</span><span class="kuning">getTinggi</span><span class="pink">());</span>
+  System<span class="pink">.</span><span class="hijau">out</span><span class="pink">.</span><span class="hijau">println</span><span class="pink">(</span><span class="orange">"Luas Segitiga : "</span>+ ob<span class="pink">.</span><span class="kuning">getLuasSegitiga</span><span class="pink">());
+  }
+}</span>
+</code></pre>
+            <!-- akhir kode editor -->
+            <br>
+            <p>Output : </p>
+            <img src="img/tutorial-java/oop/enkapsulasi/1.JPG" alt="1" class="gambar-konten"><br>
+            <p>Penjelasan :</p>
+            <p>Perhatikan method <span class="tebal biru">Enkapsulasi.java</span>, terdapat method yaitu <span class="tebal">getAlas()</span> dan <span class="tebal">setAlas()</span>.</p>
+            <ul>
+              <li>Pada method <span class="tebal">getAlas()</span> program akan mengembalikan nilai data variabel alas untuk dijadikan output.</li>
+              <li>Sedangkan method <span class="tebal">setAlas()</span> program akan meminta value atau nilai alas. Selanjutnya program akan memasukkan nilai tersebut kedalam variable alas dengan menggunakan kode <span class="tebal">this.</span></li>
+            </ul>
+            <p>Pada file <span class="biru tebal">Main.java</span> kita hanya perlu membuat objek dari file <span class="tebal biru">Enkapsulasi.java</span>. Selanjutnya kita hanya perlu memanggil method-method yang ada didalamya.</p>
+            <br>
+            <h2>Akhir Kata...</h2>
+            <br>
+            <p>Buat yang baru pertama belajar OOP, mungkin akan merasa kesulitan. Karena banyak hal baru yang belum dipahami.</p>
+            <p>Namun tenang saja…</p>
+            <p>Itu adalah proses belajar.</p>
+            <p>Silahkan banyak-banyak latihan dan pahami hakikat dari class, atribut, method dan enkapsulasi.</p>
+            <p>Selamat belajar.</p>
+        </div>
+
+        <!-- konten terbaru -->
+        <div class="col-lg-3 konten-terbaru">
+          <div class="container-konten-terbaru border">
+            <p class="artikel-terbaru border-bottom">Artikel Terbaru <br /></p>
+            <a href="cara_suntik_kuota_kemendikbud.html">
+              <div class="konten d-flex border-bottom justify-content-between">
+                <p>Cara Ubah Kuota Kemendikbud Menjadi Kuota Reguler <br /><span>28 April 2021</span></p>
+                <img src="img/kuota-kemendikbud/logo.jpg" alt="kuota kemendikbut" />
+              </div>
+            </a>
+            <br />
+            <a href="#">
+              <div class="konten d-flex justify-content-between border-bottom">
+                <p>Cara Membuat CV Dengan Mudah Menggunakan Microsoft Word <br /><span>28 April 2021</span></p>
+                <img src="img/CV/logo.png" alt="C#" />
+              </div>
+            </a>
+            <br />
+            <a href="#">
+              <div class="konten d-flex justify-content-between">
+                <p>Cara Membuat CV Dengan Mudah Menggunakan Microsoft Word <br /><span>28 April 2021</span></p>
+                <img src="img/CV/logo.png" alt="C#" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- akhir konten terbaru -->
+      </div>
+    </div>
+    <!-- Akhir Konten -->
+    <!-- footer -->
+    <footer class="text-center p-3">
+      <div>
+        <a href="#"><img src="img/logo/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="img/logo/twitter.png" alt="twitter" /></a>
+        <a href="#"><img src="img/logo/telegram.png" alt="telegram" /></a>
+        <a href="#"><img src="img/logo/youtube.png" alt="youtube" /></a>
+      </div>
+      <p>&copy; 2021 <span>INDEHOY</span> | Made with <i class="bi bi-heart-fill" style="color: red"></i></p>
+    </footer>
+    <!-- footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>

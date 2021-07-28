@@ -1,0 +1,145 @@
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+/*navbar*/
+.navbar {
+  background-color: rgb(18, 119, 126);
+}
+.navbar-brand {
+  font-family: 'Viga', sans-serif;
+  font-size: 24px;
+}
+
+.dropdown-menu {
+  padding: 10px;
+  background-color: rgb(217, 235, 233);
+}
+.dropdown-item {
+  margin: 20px;
+}
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* jumbotron */
+.jumbotron-fluid {
+  position: relative;
+  background-color: rgb(26, 38, 53);
+  margin-top: 60px;
+  font-family: viga, sans-serif;
+  height: 220px;
+  box-sizing: border-box;
+}
+
+.judul {
+  margin-top: 20px;
+}
+.judul h1 {
+  font-size: 35px;
+}
+
+.sub-judul {
+  font-weight: 100;
+  color: rgb(231, 231, 231);
+}
+
+.gambar {
+  position: absolute;
+  width: 450px;
+  top: 20px;
+}
+
+/* konten terbaru */
+.konten-terbaru {
+  overflow: hidden;
+}
+.card-konten {
+  margin-bottom: 40px;
+  background-color: white;
+  box-shadow: 4px 5px 6px 2px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  border-radius: 10px;
+  width: 28%;
+}
+.card-konten:hover {
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.card-konten img {
+  margin: auto;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  margin-bottom: 9px;
+}
+.dalam-konten {
+  padding: 5px;
+}
+.dalam-konten a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.dalam-konten span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.konten-terbaru p {
+  color: rgb(109, 109, 109);
+}
+
+@media (max-width: 960px) {
+  .konten-terbaru {
+    overflow: hidden;
+  }
+  .card-konten {
+    margin-bottom: 40px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 720px) {
+  .konten-terbaru p,
+  h3 {
+    text-align: center;
+  }
+  .konten-terbaru {
+    overflow: hidden;
+  }
+  .card-konten {
+    margin: 20px auto;
+    width: 70%;
+  }
+  .pagination {
+    justify-content: center;
+  }
+}
+
+/* pagenation */
+.nomor-page {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* footer */
+footer {
+  background-color: rgb(226, 226, 226);
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+footer p {
+  margin-top: 8px;
+}
+
+footer span {
+  font-weight: bold;
+}
+
+footer img {
+  height: 30px;
+  padding-right: 10px;
+}

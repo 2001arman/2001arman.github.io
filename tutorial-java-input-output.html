@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- my fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/css_page.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <title>Tutorial Java - Cara Input Output</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">INDEHOY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Tutorial</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="drowpdown-item" href="#">Android</a></li>
+                <li><a class="drowpdown-item" href="#">Komputer</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Pemrograman</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="drowpdown-item" href="#">C++</a></li>
+                <li><a class="drowpdown-item" href="#">Python</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+    <!-- Konten -->
+    <div class="container-konten">
+      <div class="row">
+        <div class="konten-utama border">
+          <h1 class="judul text-center">
+            Tutorial Java: Cara Input Output
+            <hr />
+          </h1>
+          <div class="author d-flex align-self-stretch">
+            <p class="tanggal"><a href="#" class="penulis">Arman Maulana </a> • 28 April 2021</p>
+          </div>
+          <br />
+          <img src="img/tutorial-java/input-output/jumbotron.jpg" alt="jumbotron" class="gambar-utama" /><br />
+          <p>Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: input, proses, dan output.</p>
+          <ul>
+            <li>Input : nilai data yang kita masukkan ke program</li>
+            <li>Proses : mengelola input menjadi sesuatu yang berguna</li>
+            <li>Output : hasil pengolahan dari proses</li>
+          </ul>
+          <p>Semua bahasa pemrograman mempunyai fungsi-fungsi yang berbeda untuk melakukan input dan output.</p>
+          <p>Pemrograman Java mempunyai tiga class atau fungsi untuk mengambil input, yaitu :</p>
+          <ol>
+            <li>Class Scanner;</li>
+            <li>Class BufferReader;</li>
+            <li>Class JOptionPane;</li>
+          </ol>
+          <p>Class Scanner dan BufferReader mengambil intput pada program berbasis teks. Sedangkan Untuk GUI menggunakan class JOptionPane.</p>
+          <p>Untuk output, Java menyediakan fungsi <span class="tebal">print()</span>, dan <span class="tebal">println()</span></p>
+          <!-- menggunakan scanner -->
+          <h2>Input Menggunakan Class Scanner</h2>
+          <br />
+          <p>Scanner merupakan class input paling sederhana, tetapi Scanner mempunyai bug jika kamu menggunakan banyak input. Scanner cocok untuk program sederhana saja</p>
+          <p>Agar kita bisa menggunakan Scanner, kita perlu import librarynya kedalam kode:</p>
+          <!-- kode editor -->
+          <pre><code><span class="pink">import</span> java.io.*<span class="pink">;</span></code></pre>
+          <!-- akhir kode editor -->
+          <p>Setelah itu buat object baru menggunakan class Scanner</p>
+          <!-- kode editor -->
+          <pre><code><span class="hijau">Scanner</span><span class="biru-muda"> input</span> = <span class="pink">new</span><span class="kuning"> Scanner</span>(<span class="hijau">System</span>.<span class="biru">in</span>);</code></pre>
+          <!-- akhir kode editor -->
+          <p>
+            Perlu diperhatikan kita sudah membuat objek Scanner bernama <span class="tebal">input.</span> Selanjutnya kita akan menggunakan objek tersebut untuk menyimpan data dari yang user masukkan. Langsung saja kita praktekkan, silahkan
+            ikuti kode berikut ini:
+          </p>
+          <!-- kode editor -->
+          <pre><code><span class="komen">// import library scanner</span>
+<span class="pink">import</span> java.util.Scanner<span class="pink">;</span>
+          
+<span class="biru">public class</span> <span class="hijau">caraScanner</span>{
+  <span class="biru">public static</span> <span class="hijau">void</span> <span class="kuning">main</span>(<span class="hijau">String</span>[] <span class="biru-muda">args</span>) {
+    <span class="komen">// deklarasi variabel</span>
+    <span class="hijau">String</span> <span class="biru-muda">nama</span>;
+    <span class="hijau">int </span><span class="biru-muda">umur</span>;
+
+    <span class="komen">// membuat objek scanner</span>
+    <span class="hijau">Scanner</span> <span class="biru-muda">input</span> = <span class="pink">new</span> <span class="kuning">Scanner</span>(<span class="hijau">System</span>.<span class="biru">in</span>);
+
+    <span class="komen">// menampilkan output</span>
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"---- Data Diri ----"</span>);
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"Nama : "</span>);
+    <span class="komen">// menggunakan scanner untuk input yang akan user masukkan</span>
+    <span class="biru-muda">nama </span>= <span class="biru-muda">input</span>.<span class="kuning">nextLine</span>();
+    <span class="komen">// menampilkan output lagi dan menggunakan scanner untuk input</span>
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"Umur : "</span>);
+    <span class="biru-muda">umur </span>= <span class="biru-muda">input</span>.<span class="kuning">nextInt</span>();
+
+    <span class="komen">// menampilkan data yang sudah user inputkan</span>
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"---------------"</span>);
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"Nama anda adalah "</span>+ <span class="biru-muda">nama</span>);
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"Anda berumur "</span>+ <span class="biru-muda">umur</span>+<span class="orange">" tahun"</span> );
+  }
+}</code></pre>
+          <!-- akhir kode editor -->
+          <p>Perlu diperhatikan, penggunaan fungsi untuk mengambil data bergantung dari tipe data variabel yang kita gunakan.</p>
+          <p>Misalnya jika tipe datanya String, maka fungsi atau method yang dipakai adalah <span class="tebal">nextLine().</span></p>
+          <p>Begitu juga dengan tipe data lain, Integer menggunakan <span class="tebal">nextInt()</span>, tipe data Double menggunakan <span class="tebal">nextDouble()</span>, dsb.</p>
+          <p>Setelah membuat program, silahkan run program tersebut dengan cara klik kanan kemudian pilih <span class="tebal">Run File</span> atau tekan tombol <span class="tebal">Shift+F6.</span></p>
+          <img src="img/tutorial-java/input-output/1.JPG" alt="Scanner" class="gambar-konten" /><br />
+          <!-- akhir scanner -->
+          <h2>Input Menggunakan Class BufferReader</h2>
+          <br />
+          <p>Class <span class="tebal">BufferReader</span> sebenarnya tidak hanya untuk mengambil input keyboard saja.</p>
+          <p><span class="tebal">BufferReader</span> juga bisa dogunakan untuk membaca input dari file dan jaringan.</p>
+          <p>Class ini terdapat pada library <span class="tebal">java.io</span></p>
+          <p>Silahkan import library terlebih dahulu untuk dapat menggunakan class <span class="tebal">BufferReader.</span></p>
+          <!-- text editor -->
+          <pre><code><span class="pink">import</span> java.io.*;</code></pre>
+          <!-- akhir text editor -->
+          <p>Kita juga harus menambahkan <span class="tebal">throws IOException</span> setelah setelah deklarasi fungsi utamanya. Langsung saja kita praktekkin</p>
+          <p>Silahkan buat class baru. disini saya menggunakan class bernama <span class="tebal">Main.</span> Kemudian isi dengan kode berikut.</p>
+          <!-- text editor -->
+          <pre>
+<code><span class="biru">import</span> <span class="hijau">java</span>.<span class="hijau">io</span>.*;
+
+<span class="biru">public class</span> <span class="hijau">Main</span> {
+  <span class="biru">public static</span> <span class="hijau">void</span> <span class="kuning">main</span>(<span class="hijau">String</span>[] <span class="biru-muda">args</span>) <span class="biru">throws</span> <span class="hijau">IOException </span>{
+    <span class="komen">// deklarasi variable</span>
+    <span class="hijau">int</span> <span class="biru-muda">umur</span>;
+
+    <span class="komen">// membuat objek BufferReader</span>
+    <span class="hijau">BufferReader</span> <span class="biru-muda">br</span> = <span class="pink">new</span> <span class="kuning">BufferReader </span>(<span class="pink">new</span> <span class="kuning">InputStreamReader</span>(<span class="hijau">System</span>.<span class="biru-muda">in</span>));
+
+    <span class="komen">// mengisi variable umur dengan BufferReader</span>
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"----- Program input Umur ----- "</span>);
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">print</span>(<span class="orange">"Inputkan umur : "</span>);
+    <span class="biru-muda">umur</span> = <span class="hijau">Integer</span>.<span class="kuning">parseInt</span>(<span class="biru-muda">br</span>.<span class="kuning">readLine</span>());
+
+    <span class="komen">// tampilkan output dari isi variable umur</span>
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"Umur kamu sudah "</span> + <span class="biru-muda">umur</span> + <span class="orange">" tahun"</span>);
+  }
+}</code></pre>
+          <!-- akhir text editor -->
+          <p><span class="tebal">Perhatikan: </span>dalam kode diatas, kita menggunakan fungsi <span class="tebal">Integer.parseInt(br.readLine());</span> untuk tipe data integer. Artinya kita merubah tipe data String ke Integer.</p>
+          <p>Untuk tipe data String gunakan fungsi <span class="tebal">readLine()</span> saja.</p>
+          <p>Sekarang mari kita coba jalankan programnya:</p>
+          <img src="img/tutorial-java/input-output/2.JPG" alt="BufferReader" class="gambar-konten" /><br />
+          <h2>Input Menggunakan Class JOptionPane</h2>
+          <br />
+          <p>Class <span class="tebal">JOptionPane</span> berdeda dengan Class input sebelumnya, karena class ini menggunakan tampilan GUI untuk memasukkan inputnya.</p>
+          <p>Class ini akan lebih interaktif terhadap user.</p>
+          <p>Untuk menggunakan class ini, kita perlu mengimpor librarynya terlebih dahulu.</p>
+          <!-- kode library -->
+          <pre><code><span class="pink">import</span> javax.swing.*;</code></pre>
+          <!-- akhir library -->
+          <p>Langsung saja kita coba buat programnya. buatlah class baru, saya disini menggunakan class bernama <span class="tebal">caraJoptionPanel</span></p>
+          <!-- kode editor lengkap -->
+          <pre>
+<code><span class="biru">import</span> <span class="hijau">javax</span>.<span class="hijau">swing</span>.*;
+
+<span class="biru">public class</span> <span class="hijau">caraJoptionPanel</span> {
+  <span class="biru">public static</span> <span class="hijau">void</span> <span class="kuning">main</span>(<span class="hijau">String</span>[] <span class="biru-muda">args</span>)  {
+    <span class="komen">// deklarasi variable</span>
+    <span class="hijau">String</span> <span class="biru-muda">nama</span>, <span class="biru-muda">kota</span>;
+
+    <span class="komen">// membuat input JOptionPane</span>
+    <span class="biru-muda">nama</span> = <span class="hijau">JOptionPane</span>.<span class="kuning">showInputDialog</span>(<span class="orange">"Nama Anda : "</span>);
+    <span class="biru-muda">kota</span> = <span class="hijau">JOptionPane</span>.<span class="kuning">showInputDialog</span>(<span class="orange">"Kota Asal : "</span>);
+
+    <span class="komen">// Menampilkan output</span>
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"---------------"</span>);
+    <span class="hijau">System</span>.<span class="biru-muda">out</span>.<span class="kuning">println</span>(<span class="orange">"Selamat Datang "</span> + <span class="biru-muda">nama</span><span class="orange">" dari"</span> + <span class="biru-muda">kota</span> );
+  }
+}</code></pre>
+          <!-- akhir kode editor -->
+          <span class="tebal">Output :</span>
+          <img src="img/tutorial-java/input-output/3.JPG" alt="output1" class="gambar-konten" /><br />
+          <img src="img/tutorial-java/input-output/4.JPG" alt="output1" class="gambar-konten" /><br />
+          <img src="img/tutorial-java/input-output/5.JPG" alt="output1" class="gambar-konten" /><br />
+          <p>Kita baru saja mengetahui tiga cara mengambil input dan menampilkan output.</p>
+          <p>Sekian tutorial kali ini. Terimakasih sudah membaca, semoga membantu.</p>
+        </div>
+
+        <!-- konten terbaru -->
+        <div class="col-lg-3 konten-terbaru">
+          <div class="container-konten-terbaru border">
+            <p class="artikel-terbaru border-bottom">Artikel Terbaru <br /></p>
+            <a href="cara_suntik_kuota_kemendikbud.html">
+              <div class="konten d-flex border-bottom justify-content-between">
+                <p>Cara Ubah Kuota Kemendikbud Menjadi Kuota Reguler <br /><span>28 April 2021</span></p>
+                <img src="img/kuota-kemendikbud/logo.jpg" alt="kuota kemendikbut" />
+              </div>
+            </a>
+            <br />
+            <a href="#">
+              <div class="konten d-flex justify-content-between border-bottom">
+                <p>Cara Membuat CV Dengan Mudah Menggunakan Microsoft Word <br /><span>28 April 2021</span></p>
+                <img src="img/CV/logo.png" alt="C#" />
+              </div>
+            </a>
+            <br />
+            <a href="#">
+              <div class="konten d-flex justify-content-between">
+                <p>Cara Membuat CV Dengan Mudah Menggunakan Microsoft Word <br /><span>28 April 2021</span></p>
+                <img src="img/CV/logo.png" alt="C#" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- akhir konten terbaru -->
+      </div>
+    </div>
+    <!-- Akhir Konten -->
+    <!-- footer -->
+    <footer class="text-center p-3">
+      <div>
+        <a href="#"><img src="img/logo/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="img/logo/twitter.png" alt="twitter" /></a>
+        <a href="#"><img src="img/logo/telegram.png" alt="telegram" /></a>
+        <a href="#"><img src="img/logo/youtube.png" alt="youtube" /></a>
+      </div>
+      <p>&copy; 2021 <span>INDEHOY</span> | Made with <i class="bi bi-heart-fill" style="color: red"></i></p>
+    </footer>
+    <!-- footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>
